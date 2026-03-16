@@ -1,0 +1,53 @@
+═══════════════════════════════════════════════════
+  FREEISLE v1.1.0 — Quick Start Guide
+═══════════════════════════════════════════════════
+
+── WINDOWS ────────────────────────────────────────
+  1. Double-click: Freeisle-Setup-1.1.0.exe
+  2. Click Next → Next → Install → Finish
+  3. Freeisle opens automatically
+  4. Desktop shortcut + Start Menu created ✅
+  5. All data saved permanently in:
+     C:\Users\YOU\AppData\Roaming\Freeisle\
+
+  Next time: just use the desktop shortcut.
+
+── KALI LINUX ──────────────────────────────────────
+  Step 1 — Install (run ONCE):
+    Put both files in same folder:
+      • Freeisle-1.1.0.AppImage
+      • install-linux.sh
+    Then run:
+      bash install-linux.sh
+
+  That will:
+    ✅ Add Freeisle to your Applications menu
+    ✅ Create a desktop icon
+    ✅ Set up disk mount so it works automatically
+
+  Step 2 — Open:
+    Double-click the desktop icon
+    OR find "Freeisle" in your Applications menu
+
+  All data saved permanently in:
+    ~/.config/Freeisle/
+
+── CHAT ────────────────────────────────────────────
+  1. Your ID shown in top-left of Chat tab
+  2. Share it with your friend
+  3. Friend clicks + and enters your ID
+  4. Both need to be online at same time
+  5. Messages go through relay — never stored
+
+── DUAL BOOT (Windows + Kali sharing) ─────────────
+  1. Install Freeisle on BOTH systems
+  2. On Windows it creates a FREEISLE disk (exFAT)
+  3. On Kali: go to Bridge tab → Scan Partitions
+  4. Find the 🏝️ FREEISLE partition → Mount
+  5. All data (files, chat, gallery) shared ✅
+
+── UNINSTALL ───────────────────────────────────────
+  Windows: Control Panel → Programs → Freeisle
+  Linux:   bash uninstall-linux.sh
+
+═══════════════════════════════════════════════════

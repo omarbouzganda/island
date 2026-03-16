@@ -1,0 +1,63 @@
+{
+  "name": "freeisle",
+  "version": "1.1.0",
+  "description": "Your isle. Your rules. Your freedom.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win":   "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "build:all":   "electron-builder --win --linux"
+  },
+  "build": {
+    "appId": "com.omarbouzganda.freeisle",
+    "productName": "Freeisle",
+    "copyright": "Copyright 2025 Omar Bouzganda",
+    "icon": "assets/logo.png",
+    "asar": true,
+    "directories": { "output": "dist" },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**",
+      "assets/**",
+      "node_modules/**"
+    ],
+    "win": {
+      "target": [{ "target": "portable", "arch": ["x64"] }],
+      "icon": "assets/logo.png",
+      "artifactName": "Freeisle-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "Freeisle-${version}.exe",
+      "unpackDirName": "freeisle"
+    },
+    "linux": {
+      "target": [{ "target": "AppImage", "arch": ["x64"] }],
+      "icon": "assets/logo.png",
+      "category": "Network;Chat;InstantMessaging",
+      "artifactName": "Freeisle-${version}.AppImage",
+      "desktop": {
+        "Name": "Freeisle",
+        "GenericName": "Private Messenger",
+        "Comment": "Your isle. Your rules. Your freedom.",
+        "Categories": "Network;Chat;InstantMessaging;",
+        "Keywords": "chat;messenger;private;encrypted;",
+        "StartupNotify": "true"
+      }
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/logo.png"
+    }
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "author": "Omar Bouzganda",
+  "license": "MIT"
+}
